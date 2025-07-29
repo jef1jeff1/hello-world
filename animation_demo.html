@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animation Alternative to GIF</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 400px;
+            height: 200px;
+            background: white;
+            border: 2px solid #333;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .moving-circle {
+            width: 40px;
+            height: 40px;
+            background: #ff4444;
+            border-radius: 50%;
+            position: absolute;
+            top: 80px;
+            animation: moveCircle 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes moveCircle {
+            0% { left: 10px; }
+            100% { left: 350px; }
+        }
+        
+        .bouncing-ball {
+            width: 30px;
+            height: 30px;
+            background: #4444ff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            animation: bounce 1s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { top: 150px; }
+            50% { top: 20px; }
+        }
+        
+        .rotating-square {
+            width: 50px;
+            height: 50px;
+            background: #44ff44;
+            position: absolute;
+            top: 75px;
+            left: 175px;
+            animation: rotate 2s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .pulse-circle {
+            width: 60px;
+            height: 60px;
+            background: #ff44ff;
+            border-radius: 50%;
+            position: absolute;
+            top: 70px;
+            left: 270px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animated Elements (GIF Alternative)</h1>
+    
+    <h2>Moving Circle</h2>
+    <div class="container">
+        <div class="moving-circle"></div>
+    </div>
+    
+    <h2>Bouncing Ball</h2>
+    <div class="container">
+        <div class="bouncing-ball"></div>
+    </div>
+    
+    <h2>Multiple Animations</h2>
+    <div class="container">
+        <div class="rotating-square"></div>
+        <div class="pulse-circle"></div>
+    </div>
+    
+    <p>These CSS animations can be converted to GIF using screen recording tools or browser automation.</p>
+</body>
+</html>
